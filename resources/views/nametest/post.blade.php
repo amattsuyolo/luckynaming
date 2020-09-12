@@ -76,7 +76,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
         <p style="color:#0abab5;">Tiffany remind me of the sun</p>
+<<<<<<< HEAD
         <p style="color:#0abab5;">Ｂecause she is pretty hot</p>
+=======
+        <p style="color:#0abab5;">Because she is pretty hot</p>
+>>>>>>> d7d42ff98cb66bce3a0ceebddff8f6cc9707841d
 
           <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
 
