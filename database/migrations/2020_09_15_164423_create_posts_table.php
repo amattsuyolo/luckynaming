@@ -15,14 +15,14 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id')->nullable();
-            $table->string('title');
-            $table->text('body');
-            $table->datetime("published_at")->nullable();
-            $table->datetime("published_until")->nullable();
-            $table->boolean("is_published")->default(false);
-            $table->string("category")->nullable();
-            $table->unsignedInteger('post_views')->nullable();
+            $table->integer('user_id')->nullable()->comment('建立者id');
+            $table->string('title')->comment('標題');
+            $table->text('body')->comment('內容');
+            $table->datetime("published_at")->nullable()->comment('發佈時間');
+            $table->datetime("published_until")->nullable()->comment('下架日期 無為一直上架');
+            $table->boolean("is_published")->default(false)->comment('是否發佈');
+            $table->string("category")->nullable()->comment('類別');
+            $table->unsignedInteger('post_views')->nullable()->comment('觀看次數');
             $table->timestamps();
         });
     }
