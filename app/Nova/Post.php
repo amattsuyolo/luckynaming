@@ -65,7 +65,7 @@ class Post extends Resource
                 ->hideFromIndex(),
             DateTime::make('下架時間','published_until')
                 ->hideFromIndex(),
-            Boolean::make('發佈')
+            Boolean::make('發佈','is_published')
                      ->trueValue('是')
                      ->falseValue('否'),
             Select::make('Category','category')
