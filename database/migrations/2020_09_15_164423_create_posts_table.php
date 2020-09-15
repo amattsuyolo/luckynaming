@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->nullable()->comment('建立者id');
             $table->string('title')->comment('標題');
+            $table->string('subtitle')->nullable()->comment('子標題');
             $table->text('body')->comment('內容');
             $table->datetime("published_at")->nullable()->comment('發佈時間');
             $table->datetime("published_until")->nullable()->comment('下架日期 無為一直上架');
