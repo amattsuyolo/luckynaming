@@ -66,8 +66,8 @@ class Post extends Resource
             DateTime::make('下架時間','published_until')
                 ->hideFromIndex(),
             Boolean::make('發佈','is_published')
-                     ->trueValue('是')
-                     ->falseValue('否'),
+                     ->trueValue('1')
+                     ->falseValue('0'),
             Select::make('Category','category')
                 ->options([
                     "命名學" => 'naming',
