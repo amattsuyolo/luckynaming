@@ -12,8 +12,10 @@
     <div class="row">
     @component('nameformal.components.form')
     @endcomponent
-     
-        <div class="post-preview">
+     <div id="post">
+
+     </div>
+        <!-- <div class="post-preview">
           <a href="/post">
             <h2 class="post-title">
               Man must explore, and this is exploration at its greatest
@@ -26,8 +28,8 @@
             <a href="#">Start Bootstrap</a>
             on September 24, 2019</p>
         </div>
-        <hr>
-        <div class="post-preview">
+        <hr> -->
+        <!-- <div class="post-preview">
           <a href="/post">
             <h2 class="post-title">
               I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
@@ -64,10 +66,10 @@
           <p class="post-meta">Posted by
             <a href="#">Start Bootstrap</a>
             on July 8, 2019</p>
-        </div>
-        <hr>
+        </div> -->
+        <!-- <hr> -->
         <!-- Pager -->
-        <div class="clearfix">
+        <div class="clearfix showMoreButton">
           <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
         </div>
       </div>
