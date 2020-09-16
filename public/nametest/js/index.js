@@ -20,7 +20,7 @@ axios.get('api/post', {
                 </a>
                 <p class="post-meta">由
                     <a href="#">${ '寶貝命名網' }</a>發表
-                    on September 24, 2019</p>
+                    於 ${ response["data"][i]["published_at"] }</p>
                 </div>
                 <hr>`;
                 }
