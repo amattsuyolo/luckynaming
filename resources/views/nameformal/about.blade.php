@@ -10,8 +10,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>About Me</h1>
-            <span class="subheading">This is what I do.</span>
+            <h1>網站緣起</h1>
+            <span class="subheading">發揚文化、愛護動物</span>
           </div>
         </div>
       </div>
@@ -26,9 +26,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        <a href="#">
+            <img class="img-fluid" src="nametest/img/polar_bear.jpg" alt="">
+        </a>
+        <p>2020是個充滿挑戰的一年，在這近年來可說是一段動盪的日子，我們是一群愛好傳統文化與北極熊的青年，希望憑藉著自身所擁有的技能發揚姓命學相關知識，未來也會逐步拓展更多元的主題。</p>
+        <p>為了網站的發展與提供創作者的動力，網站會有相關營利的廣告，然而我們承諾在2021年開始會於每年的6月5日也就是「世界環境日」捐贈網站<b>20%</b>的盈餘給予北極熊保育的團體，希望能為北極熊的存續盡一份微薄之力。
+      </p>
       </div>
     </div>
   </div>
