@@ -9,14 +9,12 @@ use Tests\TestCase;
 class PostTest extends TestCase
 {
     /**
-     * A basic feature test example.
      * @group posts
      * @return void
      */
-    public function testExample()
+    public function testPost()
     {
         $response = $this->get('/api/post');
-   
         $response->assertStatus(200);
     }
 }
