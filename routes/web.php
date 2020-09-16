@@ -23,4 +23,7 @@ Route::get('/', function () {
 Route::get('/post', function () {
     return view('nameformal/post');
 });
+Route::get('/about', function () {
+    return view('nameformal/about');
+});
 Route::get('user', 'DataBaseTest@index');
