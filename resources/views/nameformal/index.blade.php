@@ -112,5 +112,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="nametest/js/clean-blog.min.js"></script>
-  <script src="nametest/js/post.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="nametest/js/index.js"></script>
 @endpush
