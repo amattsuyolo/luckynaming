@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return view('nametest/index');
 });
-Route::get('/post', function () {
+Route::get('/testpost', function () {
     return view('nametest/post');
+});
+Route::get('/', function () {
+    return view('nameformal/index');
+});
+Route::get('/post', function () {
+    return view('nameformal/post');
 });
 Route::get('user', 'DataBaseTest@index');
