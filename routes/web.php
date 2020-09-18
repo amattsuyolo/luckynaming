@@ -23,6 +23,11 @@ Route::get('/', function () {
 Route::get('/post', function () {
     return view('nameformal/post');
 });
+// Route::get('/post/{id}', function () {
+//     return view('nameformal/post');
+// });
+// Route::get('/post/{post_id?}', 'PostController@postDetail');
+
 Route::get('/about', function () {
     return view('nameformal/about');
 });
