@@ -26,7 +26,7 @@ Route::get('/post', function () {
 // Route::get('/post/{id}', function () {
 //     return view('nameformal/post');
 // });
-// Route::get('/post/{post_id?}', 'PostController@postDetail');
+Route::get('/post/{post_id?}', 'PostController@postContent');
 
 Route::get('/about', function () {
     return view('nameformal/about');
