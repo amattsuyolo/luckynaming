@@ -1,6 +1,6 @@
 @extends('nameformal.base')
 
-@section('title', '{{ $title }}')
+@section('title', $title)
 
 @section('header')
  <!-- Page Header -->
