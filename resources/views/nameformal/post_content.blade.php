@@ -27,7 +27,7 @@
 <article>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-content col-lg-8 col-md-10 mx-auto">
            {!! $content !!}
         </div>
       </div>
@@ -41,7 +41,9 @@
     @include('nameformal.footer')
 @endsection
 
-
+@push('css')
+  <link href="/nametest/css/post_content.css" rel="stylesheet">
+@endpush
 @push('scripts')
      <!-- Bootstrap core JavaScript -->
   <script src="/nametest/vendor/jquery/jquery.min.js"></script>
