@@ -10,6 +10,10 @@ use Laravel\Nova\Fields\Text;
 
 class User extends Resource
 {
+    public static function label()
+    {
+        return '稱霸全國夥伴';
+    }
     /**
      * The model the resource corresponds to.
      *
