@@ -57,7 +57,7 @@ class Post extends Resource
             Text::make("子標題",'subtitle')
                 ->hideFromIndex(),
             Trix::make('主內容','body')
-                ->withFiles('public')
+                ->withFiles('gcs')
                 ->rules("required"),
             Number::make('觀看次數',"post_views")
                 ->hideFromIndex(),
