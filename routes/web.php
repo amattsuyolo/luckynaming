@@ -20,13 +20,10 @@ Route::get('/testpost', function () {
 Route::get('/', function () {
     return view('nameformal/index');
 });
-Route::get('/post', function () {
-    return view('nameformal/post');
-});
-// Route::get('/post/{id}', function () {
-//     return view('nameformal/post');
-// });
-Route::get('/post/{post_id?}', 'PostController@postContent');
+
+Route::get('/post/{post_id}', 'PostController@postContent');
+
+Route::get('/post', 'PostController@show');
 
 Route::get('/about', function () {
     return view('nameformal/about');

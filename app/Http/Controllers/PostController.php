@@ -25,7 +25,6 @@ class PostController extends Controller
         $content =  $post["body"];
         $published_at =  $post["published_at"];
      
-
         return view("nameformal.post_content",[
             "title" => $title,
             "sub_title" => $sub_title,
@@ -33,4 +32,15 @@ class PostController extends Controller
             "published_at" => $published_at,
         ]);
     }
+     /**
+     * 文章主頁
+     */
+    public function show(){
+        $posts = Post::orderBy('updated_at', 'desc')
+          ->paginate(8);
+        return view("nameformal.post",[
+            "posts" => $posts,
+        ]);
+    }
+
 }
