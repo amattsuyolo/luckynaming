@@ -15,10 +15,11 @@ class PostController extends Controller
     public function postContent($id)
     {
         // 文章內容
-        $post = Post::find($id)->toArray();
-        if(count($post)==0){
+        $post = Post::find($id);
+        if(!$post){
             return back();
         }
+        $post = $post->toArray();
         $title =  $post["title"];
         $sub_title =  $post["subtitle"];
         $content =  $post["body"];
