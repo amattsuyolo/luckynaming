@@ -27,7 +27,7 @@
 <article>
     <div class="container">
       <div class="row">
-        <div class="post-content col-lg-8 col-md-10 mx-auto">
+        <div class="post-content col-lg-8 col-md-10 mx-auto ql-editor">
            {!! $content !!}
         </div>
       </div>

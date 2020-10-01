@@ -15,6 +15,9 @@
     <!-- Custom styles for this template -->
     <link href="/nametest/css/clean-blog.min.css" rel="stylesheet">
     <link href="/nametest/css/naming.css" rel="stylesheet">
+    
+    <link href="/css/app.css" rel="stylesheet">
+    <script src="/js/app.js"></script>
     @stack('css')
     <title>@yield('title')</title>
 </head>

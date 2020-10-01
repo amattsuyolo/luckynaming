@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d95480791ca5c53a0b43a0f4a3ea8492",
+    "content-hash": "721317d918822c64906b6d23ef1a09fb",
     "packages": [
         {
             "name": "brick/math",
@@ -772,6 +772,47 @@
                 "validator"
             ],
             "time": "2020-09-06T13:44:32+00:00"
+        },
+        {
+            "name": "ek0519/quilljs",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ek0519/nova-quilljs.git",
+                "reference": "801c0cb6f4e19c481dc1bb0bd617c877d09b2c2f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ek0519/nova-quilljs/zipball/801c0cb6f4e19c481dc1bb0bd617c877d09b2c2f",
+                "reference": "801c0cb6f4e19c481dc1bb0bd617c877d09b2c2f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ek0519\\Quilljs\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ek0519\\Quilljs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2020-09-16T13:36:34+00:00"
         },
         {
             "name": "fideloper/proxy",

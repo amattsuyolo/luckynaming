@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "ek0519/quilljs": "^0.2.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.18.35",
         "laravel/nova": "*",

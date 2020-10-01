@@ -9,6 +9,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Trix;
+use Ek0519\Quilljs\Quilljs;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\DateTime;
 
@@ -56,9 +57,13 @@ class Post extends Resource
                 ->rules("required"),
             Text::make("子標題",'subtitle')
                 ->hideFromIndex(),
-            Trix::make('主內容','body')
-                ->withFiles('gcs')
-                ->rules("required"),
+            // Trix::make('主內容','body')
+            //     ->withFiles('gcs')
+            //     ->rules("required"),
+            Quilljs::make('主內容','body')
+            ->withFiles('gcs')
+            ->rules("required")
+            ->tooltip(true),
             Number::make('觀看次數',"post_views")
                 ->hideFromIndex(),
             DateTime::make('發行時間','published_at')
