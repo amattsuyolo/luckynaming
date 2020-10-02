@@ -28,4 +28,3 @@ Route::get('/post', 'PostController@show');
 Route::get('/about', function () {
     return view('nameformal/about');
 });
-Route::get('user', 'DataBaseTest@index');

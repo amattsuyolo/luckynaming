@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     /**
      * @param Integer $id 
-     * @return string|null
+     * @return \Illuminate\View\View
      */
     public function postContent($id)
     {
@@ -34,6 +34,7 @@ class PostController extends Controller
     }
      /**
      * 文章主頁
+     * ＠return \Illuminate\View\View
      */
     public function show(){
         $posts = Post::orderBy('updated_at', 'desc')
