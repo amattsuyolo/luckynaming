@@ -5,12 +5,12 @@
           {{ csrf_field() }}
           <div class="form-group">
             <label for="exampleInputEmail1">姓氏</label>
-            <input name="ha" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入姓氏">
+            <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入姓氏" required>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">請選擇生肖</label>
-            <select name="zodiac" class="custom-select" id="inputGroupSelect01">
-              <option selected>Choose...</option>
+            <select name="zodiac" class="custom-select" id="inputGroupSelect01" required>
+              <option  disabled="disabled">挑選...</option>
               <option value="1">鼠</option>
               <option value="2">牛</option>
               <option value="3">虎</option>
@@ -35,10 +35,10 @@
             <label for="example-date-input" >性別</label>
             <div class="form-group">
             <label class="radio-inline">
-                <input type="radio" name="optradio" checked>男
+                <input type="radio" name="sex" value="male" required>男
             </label>
             <label class="radio-inline">
-                <input type="radio" name="optradio">女
+                <input type="radio" name="sex" value="femail" required>女
             </label>
          </div>
         <div class="text-center">

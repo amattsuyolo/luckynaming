@@ -18,6 +18,7 @@
     
     <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js"></script>
+    @stack('include-scripts')
     @stack('css')
     <title>@yield('title')</title>
 </head>
