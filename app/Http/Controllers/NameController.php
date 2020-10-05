@@ -28,8 +28,8 @@ class NameController extends Controller
      */
     public function namingResult(Request $request)
     {
-        // dd($request->all());
         // $zodiac_info = $this->dealZodiac(1);
-        return view("nameformal.naming_result",compact(['zodiac_info']));
+        // return view("nameformal.naming_result",compact(['zodiac_info']));
+        return view("nameformal.naming_result");
     }
 }
