@@ -63,6 +63,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 @endpush
 @push('scripts')
+  <script src="/nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
     $('.owl-carousel').owlCarousel({
     autoplay: true,
