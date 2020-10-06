@@ -50,6 +50,9 @@ class Character extends Resource
             Text::make("字",'character')->rules("required")->withMeta(['extraAttributes' => [
                 'placeholder' => '基本上一個字 例如:婷']
             ]),
+            Text::make("部首",'radical')->rules("required")->withMeta(['extraAttributes' => [
+                'placeholder' => '請參照字典查詢結果']
+            ]),
             Number::make("筆畫",'strokes')->rules("required")->withMeta(['extraAttributes' => [
                 'placeholder' => '請參照字典查詢結果']
             ]),

@@ -17,6 +17,7 @@ class CreateCharactersTable extends Migration
             $table->bigIncrements('id');
             $table->char('character', 4)->comment('字 儀、偉');
             $table->tinyInteger('strokes')->nullable()->comment('筆畫');
+            $table->string('radical')->nullable()->comment('部首');
             $table->string('tw_meaning')->nullable()->comment('中文意思');
             $table->string('en_meaning')->nullable()->comment('英文意思');
             $table->timestamps();
