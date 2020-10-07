@@ -38,7 +38,10 @@ class PostController extends Controller
      */
     public function show(){
         $posts = Post::orderBy('updated_at', 'desc')
-          ->paginate(8);
+            ->where('is_published', 1)
+            ->where('published_at','<', date('Y-m-d H:i:s'))
+            ->where('published_until','>', date('Y-m-d H:i:s'))
+            ->paginate(8);
         return view("nameformal.post",[
             "posts" => $posts,
         ]);
