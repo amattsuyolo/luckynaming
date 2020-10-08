@@ -59,7 +59,7 @@ class Post extends Resource
             Text::make("子標題",'subtitle')
                 ->hideFromIndex(),
             Image::make('文章頁主圖','main_pic')->disk('gcs'),
-            Image::make('分享小圖（如出現在命名結果頁）','min_pic')->disk('gcs')->placeholder('請上傳600*400圖片'),
+            Image::make('分享小圖（如出現在命名結果頁,請上傳600*400圖片)','min_pic')->disk('gcs'),
             // Trix::make('主內容','body')
             //     ->withFiles('gcs')
             //     ->rules("required"),
