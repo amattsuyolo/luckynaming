@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\Trix;
 use Ek0519\Quilljs\Quilljs;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Image;
 
 class Post extends Resource
 {
@@ -57,13 +58,15 @@ class Post extends Resource
                 ->rules("required"),
             Text::make("子標題",'subtitle')
                 ->hideFromIndex(),
+            Image::make('文章頁主圖','main_pic')->disk('gcs'),
+            Image::make('分享小圖（如出現在命名結果頁）','min_pic')->disk('gcs')->placeholder('請上傳600*400圖片'),
             // Trix::make('主內容','body')
             //     ->withFiles('gcs')
             //     ->rules("required"),
             Quilljs::make('主內容','body')
-            ->withFiles('gcs')
-            ->rules("required")
-            ->tooltip(true),
+                    ->withFiles('gcs')
+                    ->rules("required")
+                    ->tooltip(true),
             Number::make('觀看次數',"post_views")
                 ->hideFromIndex(),
             DateTime::make('發行時間','published_at')
