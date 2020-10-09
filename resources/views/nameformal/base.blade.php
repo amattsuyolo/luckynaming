@@ -15,7 +15,17 @@
     <!-- Custom styles for this template -->
     <link href="/nametest/css/clean-blog.min.css" rel="stylesheet">
     <link href="/nametest/css/naming.css" rel="stylesheet">
-    
+    <!-- GA -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180226923-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-180226923-1');
+    </script>
+
     <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js"></script>
     @stack('include-scripts')
