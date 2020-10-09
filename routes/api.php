@@ -18,6 +18,8 @@ use Illuminate\Http\Request;
 // });
 // Route::middleware('auth:api')->group(function () {
     Route::get('post', 'api\PostController@index');
+    Route::get('recommend/post', 'api\PostController@recommendPost');
+
 // });
 
 
