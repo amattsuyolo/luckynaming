@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Bootstrap core CSS -->
-    <link href="/nametest/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href=@yield('bootstrap','/nametest/vendor/bootstrap/css/bootstrap.min.css') rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="/nametest/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
