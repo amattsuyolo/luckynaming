@@ -20,7 +20,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto" style="position:relative">
           <div class="post-heading">
-            <h1>{{ $title }}</h1>
+            <h1 id="post-title">{{ $title }}</h1>
             <h2 class="subheading">{{ $sub_title }}</h2>
             <span class="meta">由
               <a href="#">寶貝命名網</a>
@@ -93,49 +93,9 @@
   <script src="/nametest/vendor/jquery/jquery.min.js"></script>
   <script src="/nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+ 
   <!-- Custom scripts for this template -->
   <script src="/nametest/js/clean-blog.min.js"></script>
-  <script>
-        let $win = $(window);
-
-        // 進度區塊
-        let progressBlock = $('.progress-container');
-        // 設定進度bar藍色比例
-        function setRate(num) {
-            num = parseInt(num);
-            if (num <= 0) {
-                num = 0;
-            }
-            if (num >= 100) {
-                num = 100;
-            }
-            $("#myBar").css("width", num + "%");
-        }
-        // content 上方高度
-        let upperContentHeight = $(".post-content").offset().top;
-        console.log("upperContentHeight:",upperContentHeight);
-        // 內容高度
-        let contentHeight = $(".post-content").height();
-        console.log("contentHeight:",contentHeight);
-        // 初始下移高度
-        lastScrollY = 0
-        $win.scroll(function () {
-            //螢幕高度
-            let winHeight = $(window).height();
-            //閱讀部分（滾動下移＋螢幕高度-上方非文章區塊）
-            let readPartion = $win.scrollTop() + winHeight - upperContentHeight;
-            //閱讀站內容比例（閱讀部分/內容高度）
-            let ratio = readPartion / contentHeight * 100;
-            setRate(ratio);
-            //下移時且未閱讀完畢 顯示進度bar ; 上移隱藏進度bar
-            st = this.scrollY;
-            if (st > lastScrollY && $win.scrollTop() > upperContentHeight && ratio <= 100) {
-                progressBlock.fadeIn();
-            } else {
-                progressBlock.fadeOut();
-            }
-            lastScrollY = st;
-        })
-
-    </script>
+  <script src="/js/post_content.js"></script>
+ 
 @endpush
