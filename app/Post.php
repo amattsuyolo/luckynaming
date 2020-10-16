@@ -13,4 +13,10 @@ class Post extends Model
         'published_at' =>  'date:Y-m-d',
         'published_until' => 'datetime',
     ];
+    public function tags(){
+        return $this->belongsToMany(App\Tag::class);
+    }
+    public function categories(){
+        return $this->belongsToMany(App\Category::class);
+    }
 }
