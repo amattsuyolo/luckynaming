@@ -13,6 +13,7 @@ use Ek0519\Quilljs\Quilljs;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\HasMany;
 
 class Post extends Resource
 {
@@ -83,6 +84,8 @@ class Post extends Resource
                     "其他" => 'other'
                 ])
                 ->hideWhenUpdating(),
+            HasMany::make('標籤','tags',Tag::class),
+            HasMany::make('類別','categories',Category::class)
         ];
     }
 
