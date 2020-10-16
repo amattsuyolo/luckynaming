@@ -72,12 +72,15 @@
       <div class="row">
         <div class="post-content col-lg-8 col-md-10 mx-auto ql-editor" style="z-index:0 !important" >
            {!! $content !!}
+           <p>文章標籤:{!! $tags !!}</p>
         </div>
       </div>
     </div>
+
   </article>
 
   <hr>
+
 @endsection
 
 @section('footer')

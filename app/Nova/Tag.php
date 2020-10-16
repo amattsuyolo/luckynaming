@@ -49,7 +49,7 @@ class Tag extends Resource
             ID::make()->sortable(),
             Text::make("標籤名",'name')
             ->rules("required"),
-            BelongsToMany::make('訂單', 'posts', Post::class)
+            BelongsToMany::make('文章', 'posts', Post::class)
         ];
     }
 
