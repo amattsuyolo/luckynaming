@@ -19,8 +19,7 @@ class PostController extends Controller
         if(!$post){
             return back();
         }
-        $tags_array = $post->tags->pluck('name')->all();
-        $tags = implode(",",$tags_array);
+        $tags_array = $post->tags->all();
         $post = $post->toArray();
         $title =  $post["title"];
         $sub_title =  $post["subtitle"];
@@ -32,7 +31,7 @@ class PostController extends Controller
             "sub_title" => $sub_title,
             "content" => $content,
             "published_at" => $published_at,
-            "tags" => $tags
+            "tags" => $tags_array
         ]);
     }
      /**

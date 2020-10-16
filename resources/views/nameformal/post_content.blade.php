@@ -71,8 +71,14 @@
     <div class="container">
       <div class="row">
         <div class="post-content col-lg-8 col-md-10 mx-auto ql-editor" style="z-index:0 !important" >
-           {!! $content !!}
-           <p>文章標籤:{!! $tags !!}</p>
+           {!! $content !!}         
+        </div>
+        <div class="post-content col-11 col-lg-8 col-md-10 mx-auto">
+            @foreach ($tags as $tag)
+            <a href="{{ route('tags', ['tag_id' => $tag->id ]) }}">
+              <button type="button" class="btn btn-outline-info mr-1 ">{{ $tag->name }}</button>
+            </a>
+            @endforeach
         </div>
       </div>
     </div>
