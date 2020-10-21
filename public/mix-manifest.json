@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/tag_post.css": "/css/tag_post.css",
     "/js/index.js": "/js/index.js",
+    "/js/name_result.js": "/js/name_result.js",
     "/js/post_content.js": "/js/post_content.js"
 }

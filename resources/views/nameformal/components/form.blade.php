@@ -7,7 +7,7 @@
           {{ csrf_field() }}
           <div class="form-group">
             <label for="exampleInputEmail1">姓氏</label>
-            <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入姓氏" required>
+            <input name="last_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="請輸入姓氏" required>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">請選擇生肖</label>
