@@ -29,8 +29,11 @@ class NameController extends Controller
      */
     public function namingResult(Request $request)
     {
-        $request=$request->all();
+        $request = $request->all();
         $character_info = $this->localDealCharacter($request);
+        if(is_null($character_info)){
+            return redirect()->back()->withErrors(['抱歉，暫無此姓資訊']);
+        }
         //適合的筆畫排列
         $goodNumComBinations = $this->localDealEightyOne($character_info["draw"]);
         //隨機選取的筆畫排列
