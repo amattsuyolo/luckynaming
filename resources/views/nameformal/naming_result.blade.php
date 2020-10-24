@@ -7,7 +7,41 @@
 @endsection
 
 @section('content')
-<div class="container">
+<style>
+    .naming-result{
+        position: relative; 
+        background-repeat: no-repeat;
+        background-size: 204px 166px;
+        /* background-image: url('https://storage.googleapis.com/luckynaming/51miz-E423424-FF97220C.png'); */
+        background-position: calc(75% ) 181px;
+   }
+    .naming-result::before{
+        content: "";
+        position: absolute;
+        background-color: rgba(0,0,0,0.25);
+    }
+    .hero { 
+   
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://placekitten.com/1200/800');
+    background-size: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
+}
+</style>
+<div class="container naming-result" id="naming-result">
     <div class="row">
         <div class="post-content col-lg-8 col-md-10 mx-auto">
 
@@ -28,17 +62,17 @@
             <hr>
             <p><strong>名首字筆畫：<span id="middle-draw">{{$choosedArray["middle"]}} </span></strong></p>
             <div>
-                <p><b>生肖喜用字</b>：</p>
+                <p><b>生肖{{ $ch_zodiac }}喜用字</b>：</p>
                 <p id="middle-good">{{ $zodiac_middle_info["good"] }}</p>
-                <p><b>生肖忌用字</b>：</p>
+                <p><b>生肖{{ $ch_zodiac }}忌用字</b>：</p>
                 <p id="middle-bad">{{ $zodiac_middle_info["bad"] }}</p>
             </div>
             <hr>
             <p><strong>名次字筆畫：<span id="last-draw">{{ $choosedArray["last"] }}</span></strong></p>
             <div>
-                <p><b>生肖喜用字</b>:</p>
+                <p><b>生肖{{ $ch_zodiac }}喜用字</b>:</p>
                 <p id="last-good">{{ $zodiac_last_info["good"] }}</p>
-                <p><b>生肖忌用字</b>：</p>
+                <p><b>生肖{{ $ch_zodiac }}忌用字</b>：</p>
                 <p id="last-bad">{{ $zodiac_last_info["bad"] }}</p>
                 <p></p>
             </div>

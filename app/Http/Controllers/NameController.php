@@ -74,6 +74,7 @@ class NameController extends Controller
             "zodiac_last_info" => $return_zodiac_last_info,
             "content" => $content,
             "zodiac" => $request["zodiac"],
+            "ch_zodiac" => $zodiac_middle_info["ch_zodiac"],
         ]);
     }
      /**
@@ -194,10 +195,11 @@ class NameController extends Controller
      */
     public function dealLocalZodiac($zodiac_id,$draw)
     {
-        $zodiacInfo = config(config("zodiac.".$zodiac_id));
+        $zodiacInfo = config(config('zodiac.'.$zodiac_id.'.en'));
         $returnArray = [];
         $returnArray["good"] = $zodiacInfo["better"]['_'.$draw];
         $returnArray["bad"] = $zodiacInfo["worse"]['_'.$draw];
+        $returnArray["ch_zodiac"] = config('zodiac.'.$zodiac_id.'.tc');
         return $returnArray;
     }
 

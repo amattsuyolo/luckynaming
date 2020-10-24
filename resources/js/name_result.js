@@ -1,10 +1,18 @@
+// 更換背景圖片
+switch (zodiac) {
+  case 1:
+    document.getElementById("naming-result").style.backgroundImage ="url('https://storage.googleapis.com/luckynaming/51miz-E423424-FF97220C.png')";
+    break;
+  case 2:
+    document.getElementById("naming-result").style.backgroundImage ="url('https://storage.googleapis.com/luckynaming/ox.png')";
+    break;
+}
 // 更新顯示結果
 document.getElementById("draw-combinations").addEventListener("change", getSpecificNamingResult);
 
 function getSpecificNamingResult() {
   let objS = document.getElementById("draw-combinations");
   let combinations = objS.value;
-  console.log("組：", combinations);
   const url = '/api/name/specificresult';
   const config = {
     withCredentials: false, // default
