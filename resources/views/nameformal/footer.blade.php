@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-inline text-center">
+          <!-- <ul class="list-inline text-center">
             <li class="list-inline-item">
               <a href="#">
                 <span class="fa-stack fa-lg">
@@ -28,8 +28,8 @@
                 </span>
               </a>
             </li>
-          </ul>
-          <p class="copyright text-muted">Copyright &copy; Your Website 2020</p>
+          </ul> -->
+          <p class="copyright text-muted">Copyright &copy;2020 babyname. All rights reserved.</p>
         </div>
       </div>
     </div>

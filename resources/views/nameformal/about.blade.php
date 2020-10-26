@@ -4,7 +4,7 @@
 
 @section('header')
      <!-- Page Header -->
- <header class="masthead" style="background-image: url('/nametest/img/about-bg.jpg')">
+ <header class="masthead" style="background-image: url('https://storage.googleapis.com/luckynaming/about-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">

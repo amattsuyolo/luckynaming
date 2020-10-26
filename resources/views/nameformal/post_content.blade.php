@@ -14,7 +14,7 @@
         </div>
     </div>
  <!-- Page Header -->
- <header class="masthead" style="background-image: url('/nametest/img/post-bg.jpg')">
+ <header class="masthead" style="background-image: url('/nametest/img/big2.jpeg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
