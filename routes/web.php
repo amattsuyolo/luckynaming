@@ -19,7 +19,7 @@ Route::get('/testpost', function () {
 });
 Route::get('/', function () {
     return view('nameformal/index');
-});
+})->name("index");
 
 Route::post('/naming/result', 'NameController@namingResult');
 

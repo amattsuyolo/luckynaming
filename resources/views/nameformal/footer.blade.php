@@ -2,34 +2,10 @@
 <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <!-- <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-          </ul> -->
-          <p class="copyright text-muted">Copyright &copy;2020 babyname. All rights reserved.</p>
+        <div class="col-lg-8 col-md-10 mx-auto" style="text-align: center;">
+        <div class="line-it-button" data-lang="zh_Hant" data-type="share-a" data-ver="3" data-url="{{ url()->current() }}" data-color="default" data-size="large" data-count="false" style="display: none;"></div>
+        <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>   
+        <p class="copyright text-muted">Copyright &copy;2020 babyname. All rights reserved. 2020</p>
         </div>
       </div>
     </div>
