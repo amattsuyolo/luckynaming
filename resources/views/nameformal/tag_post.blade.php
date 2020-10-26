@@ -17,8 +17,10 @@
   @foreach ($posts as $post)
     <div class="card">
       <div class="card-img-body">
+      <a href="/post/{{ $post->id }}">
       <img class="card-img" src="https://storage.googleapis.com/luckynaming/{{ $post->min_pic }}" alt="Card image cap">
-      </div>
+      </a>  
+    </div>
       <div class="card-body">
         <h4 class="card-title">{{ $post->title }}</h4>
         <p class="card-text"> {{ $post->subtitle }}</p>

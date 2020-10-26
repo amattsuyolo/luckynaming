@@ -22,7 +22,9 @@ axios.get('/api/recommend/post', {
     $.each(response.data, function (key, elem) {
         console.log("hi:",elem.title);
         $('#carrusel').append(` <div class="card">
+        <a href="/post/${ elem.id }">
         <div class="img"><img src="https://storage.googleapis.com/luckynaming/${ elem.min_pic }" alt="推薦小圖"></div>
+        </a>
         <div class="content">
           <div class="title">${ elem.title }</div>
           <div class="sub-title">${ elem.subtitle }</div>
