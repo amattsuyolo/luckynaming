@@ -8,7 +8,7 @@
     <meta property="og:url"           content="{{ url()->current() }}" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="@yield('og-title','寶貝命名網')" />
-    <meta property="og:description"   content="亞洲最專業命名網站，業務包含命名、算名、風水、五行、八卦" />
+    <meta property="og:description"   content="最專業命名網站，業務含蓋命名、算名、風水、五行、八卦" />
     <meta property="og:image"         content="@yield('og-image','https://storage.googleapis.com/luckynaming/big2.jpeg')" />
 
     <!-- Bootstrap core CSS -->
