@@ -2,6 +2,10 @@
 
 @section('bootstrap','/nametest/vendor/bootstrap/css/bootstrap-post-content.css')
 
+@section('og-title', $title)
+
+@section('og-image', 'https://storage.googleapis.com/luckynaming/'.$share_pic)
+
 @section('title', $title)
 
 @section('header')
