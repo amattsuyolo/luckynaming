@@ -32,8 +32,7 @@
 @endsection
 
 @push('scripts')
-     <!-- Bootstrap core JavaScript -->
-  <script src="nametest/vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
   <script src="nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for this template -->

@@ -25,7 +25,7 @@
 
       gtag('config', 'UA-180226923-1');
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js"></script>
     @stack('include-scripts')
@@ -64,6 +64,8 @@
 @yield('content')
 
 @yield('footer')
+@component('nameformal.components.privacy')
+@endcomponent
 </body>
 @stack('scripts')
 </html>
