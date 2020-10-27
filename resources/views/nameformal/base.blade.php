@@ -35,6 +35,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <link href="/css/app.css" rel="stylesheet">
     <script src="/js/app.js"></script>
+    @yield('amp')
     @stack('include-scripts')
     @stack('css')
     <title>@yield('title')</title>

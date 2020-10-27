@@ -23,7 +23,9 @@ Route::get('/', function () {
 
 Route::post('/naming/result', 'NameController@namingResult');
 
-Route::get('/post/{post_id}', 'PostController@postContent');
+Route::get('/post/{post_id}', 'PostController@postContent')->name('content');
+
+Route::get('/post/amp/{post_id}', 'PostController@postAmpContent')->name('amp-content');
 
 Route::get('/post', 'PostController@show');
 

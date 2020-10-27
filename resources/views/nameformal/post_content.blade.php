@@ -2,6 +2,10 @@
 
 @section('bootstrap','/nametest/vendor/bootstrap/css/bootstrap-post-content.css')
 
+@section('amp')
+<link  rel = "amphtml"  href = "{{ route('amp-content', $post_id) }}" >
+@endsection
+
 @section('og-title', $title)
 
 @section('og-image', 'https://storage.googleapis.com/luckynaming/'.$share_pic)
