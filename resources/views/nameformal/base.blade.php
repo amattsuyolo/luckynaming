@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="專業寶貝命名網專業算命、取名、命名" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://storage.googleapis.com/luckynaming/icon.svg?v=1028">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:url"           content="{{ url()->current() }}" />
     <meta property="og:type"          content="website" />
