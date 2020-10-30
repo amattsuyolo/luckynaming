@@ -43,7 +43,11 @@ class NameController extends Controller
         $zodiac_last_info = $this->dealLocalZodiac($request["zodiac"],$choosedArray["last"]);
         //取得81總格數說明
         $eightyone = config("eightyone");
-        $content =  $eightyone[$choosedArray["middle"]+$choosedArray["last"]+$character_info["draw"]-1]["content"];
+        $sum = $choosedArray["middle"]+$choosedArray["last"]+$character_info["draw"]-1;
+        while($sum>81) {
+            $sum = $sum - 81;
+        }
+        $content =  $eightyone[$sum]["content"];
         $content = explode('，',$content,4);
         // return view("nameformal.naming_result",compact(['zodiac_info']));
         $returnComBinations=[];
@@ -51,11 +55,11 @@ class NameController extends Controller
             $returnComBinations[$i] = $goodNumComBinations[$i]['top'].','.$goodNumComBinations[$i]['middle'].','.$goodNumComBinations[$i]['last'];
         }
         $return_zodiac_middle_info=[];
-        $return_zodiac_middle_info["good"] = implode(",",$zodiac_middle_info["good"]);
-        $return_zodiac_middle_info["bad"] = implode(",",$zodiac_middle_info["bad"]);
+        $return_zodiac_middle_info["good"] = implode(",",$zodiac_middle_info["good"]) ?? "";
+        $return_zodiac_middle_info["bad"] = implode(",",$zodiac_middle_info["bad"]) ?? "";
         $return_zodiac_last_info=[];
-        $return_zodiac_last_info["good"] = implode(",",$zodiac_last_info["good"]);
-        $return_zodiac_last_info["bad"] = implode(",",$zodiac_last_info["bad"]);
+        $return_zodiac_last_info["good"] = implode(",",$zodiac_last_info["good"]) ?? "";
+        $return_zodiac_last_info["bad"] = implode(",",$zodiac_last_info["bad"])?? "";
 
         // echo "<pre>";
         // var_dump([
@@ -167,16 +171,20 @@ class NameController extends Controller
        $goodNumArray = [];
        //總筆畫不大於60
        $quality = 96;
-       $total = 42 - $topDraw;
+       $total = 46 - $topDraw;
        for($middleDraw=1;$middleDraw<$total;$middleDraw++){
             for($lastDraw=1;$lastDraw<$total-$middleDraw;$lastDraw++){
                 $value = 0;
-                $value += $eightyOneForCalculate[$topDraw +1]; 
-                $value += $eightyOneForCalculate[$middleDraw + $topDraw];
-                $value += $eightyOneForCalculate[$middleDraw + $lastDraw]; 
-                $value += $eightyOneForCalculate[$lastDraw + 1]; 
-                $sum = ($topDraw + $middleDraw + $lastDraw<=81) ? ($topDraw + $middleDraw + $lastDraw) : ($topDraw + $middleDraw + $lastDraw-81);
-                $value += $eightyOneForCalculate[$sum];
+                try {
+                    $value += $eightyOneForCalculate[$topDraw +1]; 
+                    $value += $eightyOneForCalculate[$middleDraw + $topDraw];
+                    $value += $eightyOneForCalculate[$middleDraw + $lastDraw]; 
+                    $value += $eightyOneForCalculate[$lastDraw + 1]; 
+                    $sum = ($topDraw + $middleDraw + $lastDraw<=81) ? ($topDraw + $middleDraw + $lastDraw) : ($topDraw + $middleDraw + $lastDraw-81);
+                    $value += $eightyOneForCalculate[$sum];
+                } catch (\Exception $e) {
+                    continue;
+                }
                 if($value*2 > $quality){
                     array_push($goodNumArray,[
                         "value" => $value,
@@ -197,8 +205,8 @@ class NameController extends Controller
     {
         $zodiacInfo = config(config('zodiac.'.$zodiac_id.'.en'));
         $returnArray = [];
-        $returnArray["good"] = $zodiacInfo["better"]['_'.$draw];
-        $returnArray["bad"] = $zodiacInfo["worse"]['_'.$draw];
+        $returnArray["good"] = $zodiacInfo["better"]['_'.$draw] ?? "";
+        $returnArray["bad"] = $zodiacInfo["worse"]['_'.$draw] ?? "";
         $returnArray["ch_zodiac"] = config('zodiac.'.$zodiac_id.'.tc');
         return $returnArray;
     }
