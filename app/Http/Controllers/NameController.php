@@ -37,7 +37,11 @@ class NameController extends Controller
         //適合的筆畫排列
         $goodNumComBinations = $this->localDealEightyOne($character_info["draw"]);
         //隨機選取的筆畫排列
-        $choosedArray = $goodNumComBinations [array_rand($goodNumComBinations)];
+        try {
+            $choosedArray = $goodNumComBinations [array_rand($goodNumComBinations)];
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['抱歉，暫無此姓資訊']);
+        }
         //生肖用字資訊
         $zodiac_middle_info = $this->dealLocalZodiac($request["zodiac"],$choosedArray["middle"]);
         $zodiac_last_info = $this->dealLocalZodiac($request["zodiac"],$choosedArray["last"]);
