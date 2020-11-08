@@ -95,6 +95,9 @@
 
   <hr>
 <!-- 推薦文章 -->
+<h3 class=" info-color white-text text-center py-4">
+    <strong>精選文章</strong>
+</h3>
 @component('nameformal.components.recommend_post')
 @endcomponent
 @endsection
