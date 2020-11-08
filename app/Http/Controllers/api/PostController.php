@@ -27,12 +27,14 @@ class PostController extends Controller
      * 推薦的文章
      * @return Response
      */
-    public function recommendPost():object
+    public function recommendPost($id = NULL):object
     {
+        $id = isset($id) ? $id : 0;
         $content = Post::orderBy('updated_at', 'desc')
         ->where('is_published', 1)
         ->where('published_at','<', date('Y-m-d H:i:s'))
         ->where('published_until','>', date('Y-m-d H:i:s'))
+        ->where('id','!=',$id)
         ->take(3)
         ->get();
         return response()->json($content, 200);

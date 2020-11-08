@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 // });
 // Route::middleware('auth:api')->group(function () {
     Route::get('post', 'api\PostController@index');
-    Route::get('recommend/post', 'api\PostController@recommendPost');
+    Route::get('recommend/post/{id?}', 'api\PostController@recommendPost');
     Route::post('name/specificresult', 'NameController@specificNamingResult');
 // });
 
