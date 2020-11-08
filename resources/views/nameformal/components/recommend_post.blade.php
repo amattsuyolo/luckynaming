@@ -11,8 +11,12 @@ console.log(recommend );
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <script src="/nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
+url = '/api/recommend/post';
+if(post_id){
+    url = `/api/recommend/post/${post_id}`;
+}
 
-axios.get('/api/recommend/post', {
+axios.get(url, {
     params: {
         ID: 0
     }
