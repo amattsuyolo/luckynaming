@@ -34,7 +34,7 @@ axios.get(url, {
           <div class="sub-title">${ elem.subtitle }</div>
           <div class="btn">
           <a href="/post/${ elem.id }">
-            <button>閱讀更多</button>
+            <button class="btn btn-outline-dark">閱讀更多</button>
           </a>
           </div>
         </div>
