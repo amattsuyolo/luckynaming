@@ -12,7 +12,7 @@ console.log(recommend );
 <script src="/nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>
 url = '/api/recommend/post';
-if(post_id){
+if(typeof(post_id) != 'undefined'){
     url = `/api/recommend/post/${post_id}`;
 }
 
