@@ -94,7 +94,9 @@
   </article>
 
   <hr>
-
+<!-- 推薦文章 -->
+@component('nameformal.components.recommend_post')
+@endcomponent
 @endsection
 
 @section('footer')
@@ -105,14 +107,13 @@
   <link href="/nametest/css/post_content.css" rel="stylesheet">
   
 @endpush
-@push('scripts')
-     <!-- Bootstrap core JavaScript -->
-  <script src="/nametest/vendor/jquery/jquery.min.js"></script>
+@push('include-scripts')
+   <!-- Bootstrap core JavaScript -->
+   <script src="/nametest/vendor/jquery/jquery.min.js"></script>
   <script src="/nametest/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
- 
+@endpush
+@push('scripts')
   <!-- Custom scripts for this template -->
   <script src="/nametest/js/clean-blog.min.js"></script>
   <script src="/js/post_content.js"></script>
- 
 @endpush
