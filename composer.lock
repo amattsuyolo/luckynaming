@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "969f31f0f8ba0b06992ff9d16099f1ed",
+    "content-hash": "d101a6b57c808227ed519550e8c10f41",
     "packages": [
         {
             "name": "brick/math",
@@ -165,6 +165,48 @@
                 "time"
             ],
             "time": "2019-11-30T02:33:19+00:00"
+        },
+        {
+            "name": "davidpiesse/nova-audio",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davidpiesse/nova-audio.git",
+                "reference": "684163447fb2a0348d58a85535ef129c024bc6a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davidpiesse/nova-audio/zipball/684163447fb2a0348d58a85535ef129c024bc6a6",
+                "reference": "684163447fb2a0348d58a85535ef129c024bc6a6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Davidpiesse\\Audio\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Davidpiesse\\Audio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Audio Field for Laravel Nova",
+            "keywords": [
+                "audio",
+                "laravel",
+                "nova"
+            ],
+            "time": "2020-04-27T07:39:34+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

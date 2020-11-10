@@ -14,6 +14,7 @@ use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\HasMany;
+use Davidpiesse\Audio\Audio;
 
 class Post extends Resource
 {
@@ -61,6 +62,7 @@ class Post extends Resource
                 ->hideFromIndex(),
             Image::make('文章頁主圖','main_pic')->disk('gcs'),
             Image::make('分享小圖（如出現在命名結果頁,請上傳600*400圖片)','min_pic')->disk('gcs'),
+            Audio::make('音檔','audio')->disk('gcs'),
             // Trix::make('主內容','body')
             //     ->withFiles('gcs')
             //     ->rules("required"),
