@@ -15,5 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/index.js', 'public/js/index.js')
     .js('resources/js/name_result.js', 'public/js/name_result.js')
     .js('resources/js/post_content.js', 'public/js/post_content.js')
+    .js('resources/js/audio_player.js', 'public/js/audio_player.js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/tag_post.scss', 'public/css');

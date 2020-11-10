@@ -75,6 +75,18 @@
         }
     </style>
 <!-- Post Content -->
+<div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-10 mx-auto">
+        <span class="text-large">聽好音樂心情輕鬆好運來</span>
+        <audio preload="auto" controls>
+                <source src="https://storage.googleapis.com/luckynaming/luck_default2.mp3">
+        </audio>
+        </div>
+      </div>
+</div>
+		
+		
 <article>
     <div class="container">
       <div class="row">
@@ -123,4 +135,6 @@
   <!-- Custom scripts for this template -->
   <script src="/nametest/js/clean-blog.min.js"></script>
   <script src="/js/post_content.js"></script>
+  <script src="/js/audio_player.js"></script>
+  <script>$( function() { $( 'audio' ).audioPlayer(); } );</script>
 @endpush
