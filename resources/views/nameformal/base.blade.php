@@ -34,7 +34,7 @@
       gtag('config', 'UA-180226923-1');
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/app.css?ver=1" rel="stylesheet">
     <script src="/js/app.js"></script>
     @yield('amp')
     @stack('include-scripts')
