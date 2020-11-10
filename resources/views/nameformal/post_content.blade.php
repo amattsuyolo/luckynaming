@@ -1,3 +1,5 @@
+@inject('postPresenter', 'App\Presenters\PostPresenter')
+
 @extends('nameformal.base')
 
 @section('bootstrap','/nametest/vendor/bootstrap/css/bootstrap-post-content.css')
@@ -78,9 +80,13 @@
 <div class="container">
       <div class="row">
         <div class="col-lg-8 col-10 mx-auto">
-        <span class="text-large">聽好音樂心情輕鬆好運來</span>
+          @if($audio )
+          <span class="text-large">收聽文章故事內容</span>
+          @else
+          <span class="text-large">聽好音樂心情輕鬆好運來</span>
+          @endif
         <audio preload="auto" controls>
-                <source src="https://storage.googleapis.com/luckynaming/luck_default2.mp3">
+                <source src="{{ $postPresenter->getCloudBaseUrl() }}{{ $audio ?? 'luck_default2.mp3' }}">
         </audio>
         </div>
       </div>

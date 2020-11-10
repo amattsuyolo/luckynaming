@@ -26,6 +26,7 @@ class PostController extends Controller
         $content =  $post["body"];
         $published_at =  $post["published_at"];
         $share_pic = $post["min_pic"];
+        $audio = $post["audio"];
        
         return view("nameformal.post_content",[
             "title" => $title,
@@ -34,7 +35,8 @@ class PostController extends Controller
             "published_at" => $published_at,
             "tags" => $tags_array,
             "share_pic" =>  $share_pic,
-            "post_id" => $id
+            "post_id" => $id,
+            "audio" => $audio
         ]);
     }
         /**
