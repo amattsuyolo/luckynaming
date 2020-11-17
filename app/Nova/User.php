@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
 
 class User extends Resource
@@ -64,6 +65,14 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),
+            Select::make('角色', 'role')
+            ->options([
+                '1' => 'Admin 管理員 ',
+                '2' => 'Editor 編輯',
+                '3' => 'Customer Service 客服',
+            ])
+            ->rules('required')
+            ->displayUsingLabels(),
         ];
     }
 
