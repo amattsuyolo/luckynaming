@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Schema;
 use App\Post;
 
 class PostsTableSeeder extends Seeder
@@ -14,6 +15,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+        //Schema::disableForeignKeyConstraints();
         DB::table('posts')->truncate();
         Post::unguard();
         factory(Post::class, 10)->create();
