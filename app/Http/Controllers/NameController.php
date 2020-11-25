@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\NamingRequest;
+use App\Http\Requests\SpecificNamingRequest;
 use App\Zodiac;
 use Symfony\Polyfill\Intl\Idn\Info;
 
@@ -27,7 +29,7 @@ class NameController extends Controller
      /**
      * @return \Illuminate\View\View
      */
-    public function namingResult(Request $request)
+    public function namingResult(NamingRequest $request)
     {
         $request = $request->all();
         $character_info = $this->localDealCharacter($request);
@@ -88,7 +90,7 @@ class NameController extends Controller
      /**
      * @return json
      */
-    public function specificNamingResult(Request $request)
+    public function specificNamingResult(SpecificNamingRequest $request)
     {
         $request=$request->all();
         // $character_info = $this->localDealCharacter($request);
