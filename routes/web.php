@@ -34,3 +34,7 @@ Route::get('/tag/{tag_id}', 'TagController@index')->name('tags');
 Route::get('/about', function () {
     return view('nameformal/about');
 });
+
+Route::get('/for-tiffany', function () {
+    return view('card');
+});
