@@ -34,7 +34,7 @@
       gtag('config', 'UA-180226923-1');
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <link href="/css/app.css?v=1" rel="stylesheet">
+    <link href="/css/app.css?v=2" rel="stylesheet">
     <script src="/js/app.js"></script>
     @yield('amp')
     @stack('include-scripts')
@@ -60,6 +60,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/post">命名學知識</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link animated bounce" href="{{ route("sixty.sign") }}">六十甲子籤</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="contact.html">聯絡我們</a>

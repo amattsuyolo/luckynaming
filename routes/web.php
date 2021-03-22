@@ -31,6 +31,11 @@ Route::get('/post', 'PostController@show');
 
 Route::get('/tag/{tag_id}', 'TagController@index')->name('tags');
 
+Route::get('/sign', function () {
+    return view('nameformal/sign');
+    // return "hello";
+})->name('sixty.sign');
+
 Route::get('/about', function () {
     return view('nameformal/about');
 });
