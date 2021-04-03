@@ -14,7 +14,7 @@ class SignController extends Controller
      */
     public function index()
     {
-        //
+        return view('nameformal/sign/index');
     }
 
     /**
@@ -46,7 +46,7 @@ class SignController extends Controller
      */
     public function show(Sign $sign)
     {
-        //
+        return view("nameformal.sign.sign",["sign"=>$sign]);
     }
 
     /**
