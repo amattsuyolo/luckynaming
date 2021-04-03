@@ -31,10 +31,9 @@ Route::get('/post', 'PostController@show');
 
 Route::get('/tag/{tag_id}', 'TagController@index')->name('tags');
 
-Route::get('/sign', function () {
-    return view('nameformal/sign');
-    // return "hello";
-})->name('sixty.sign');
+//六十甲子籤
+Route::get('/sign', 'SignController@index')->name('sixty.sign');
+Route::get('/sign/{sign}', 'SignController@show')->name('sixty.sign_content');
 
 Route::get('/about', function () {
     return view('nameformal/about');
