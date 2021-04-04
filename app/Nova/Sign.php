@@ -55,6 +55,10 @@ class Sign extends Resource
                 ->rules('required'),
             Image::make('籤文圖片', 'pic')->disk('gcs'),
             Quilljs::make('籤文解析', 'analysis'),
+            Text::make('第一句解析', 'first'),
+            Text::make('第二句解析', 'second'),
+            Text::make('第三句解析', 'third'),
+            Text::make('第四句解析', 'fourth'),
         ];
     }
 
