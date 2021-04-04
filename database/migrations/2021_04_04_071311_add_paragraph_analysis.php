@@ -13,7 +13,7 @@ class AddParagraphAnalysis extends Migration
      */
     public function up()
     {
-        Schema::table('Signs', function (Blueprint $table) {
+        Schema::table('signs', function (Blueprint $table) {
             $table->string('first')->nullable()->after('analysis')->comment('第一句解析');
             $table->string('second')->nullable()->after('first')->comment('第二句解析');
             $table->string('third')->nullable()->after('second')->comment('第三句解析');
