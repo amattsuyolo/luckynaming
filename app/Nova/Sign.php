@@ -51,8 +51,7 @@ class Sign extends Resource
             Text::make('籤文名 ex:甲子籤', 'sign_topic')
                 ->sortable()
                 ->rules('required'),
-            Quilljs::make('籤文本體', 'sign_content')
-                ->rules('required'),
+            Quilljs::make('籤文本體', 'sign_content'),
             Image::make('籤文圖片', 'pic')->disk('gcs'),
             Quilljs::make('籤文解析', 'analysis'),
             Text::make('第一句解析', 'first'),
