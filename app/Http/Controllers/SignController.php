@@ -46,7 +46,9 @@ class SignController extends Controller
      */
     public function show(Sign $sign)
     {
-        return view("nameformal.sign.sign",["sign"=>$sign]);
+        $sign_key = Config('yearSign.' . ($sign->id - 1));
+        $content = Config('yearSignContent.content.' . $sign_key);
+        return view("nameformal.sign.sign", ["sign" => $sign, "content" => $content]);
     }
 
     /**

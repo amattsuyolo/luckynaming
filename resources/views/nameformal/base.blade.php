@@ -61,9 +61,9 @@
           <li class="nav-item">
             <a class="nav-link" href="/post">命名學知識</a>
           </li>
-          {{-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link animated bounce" href="{{ route("sixty.sign") }}">六十甲子籤</a>
-          </li> --}}
+          </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="contact.html">聯絡我們</a>
           </li> -->
