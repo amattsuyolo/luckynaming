@@ -13,9 +13,12 @@ class SignTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach(config("yearSign") as $value){
+        foreach(config("yearSign") as $key => $value){
+            $route = ($key<10) ? 'sign/sign0'.$key.'.jpg' : 'sign/sign'.$key.'.jpg' ;
             Sign::insert([
-                'sign_topic' => $value
+                'sign_topic' => $value,
+                //sign/sign01.jpg
+                'pic' => $route 
             ]);
         }  
     }
