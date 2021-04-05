@@ -2,6 +2,8 @@
 
 @section('title', '寶貝命名網')
 
+@section('og-description', $og_description)
+
 @section('header')
 <header class="masthead" style="background-image: url('/nametest/img/big2.jpeg')">
     <div class="overlay"></div>

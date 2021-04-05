@@ -48,7 +48,8 @@ class SignController extends Controller
     {
         $sign_key = Config('yearSign.' . ($sign->id - 1));
         $content = Config('yearSignContent.content.' . $sign_key);
-        return view("nameformal.sign.sign", ["sign" => $sign, "content" => $content]);
+        $og_description = "專業解籤：{$content['first']},{$content['second']},{$content['third']},{$content['fourth']}";
+        return view("nameformal.sign.sign", ["sign" => $sign, "content" => $content, "og_description" => $og_description]);
     }
 
     /**
