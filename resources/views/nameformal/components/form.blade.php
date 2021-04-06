@@ -1,11 +1,11 @@
       <div class=" info-color white-text text-center py-4">
         <h2><strong>搜索吉祥美名</strong></h2>
-        <span><i>網站開發中請期待</i></span>
+        {{-- <span><i>網站開發中請期待</i></span> --}}
       </div>
-      @if($errors->any())
+      {{-- @if($errors->any())
         <script>alert("{{ $errors->first() }}")</script>
-      @endif
-      <form action="/naming/result" method="POST" style="background-image:url(nametest/img/butterfly2.jpg);background-repeat: no-repeat; background-size: 100% auto;">
+      @endif --}}
+      <form action="{{ route('naming.result')}}" method="POST" style="background-image:url(nametest/img/butterfly2.jpg);background-repeat: no-repeat; background-size: 100% auto;">
         {{ csrf_field() }}
         <div class="form-group">
           <label>姓氏</label>
@@ -45,22 +45,22 @@
               <input type="radio" name="sex" value="femail" required>女
             </label>
           </div>
-          <div class="form-check">
+          {{-- <div class="form-check">
             <input name="test" type="checkbox" class="form-check-input" id="is-test">
             <label class="form-check-label" for="exampleCheck1">測試人員</label>
-          </div>
+          </div> --}}
           <div class="text-center">
             <button id="go-naming" type="submit" style="font-size:large;" class="btn btn-info  btn-block">立即獲取</button>
           </div>
       </form>
       </div>
       <script>
-        document.getElementById("go-naming").addEventListener("click", isTest);
+        // document.getElementById("go-naming").addEventListener("click", isTest);
 
-        function isTest(evt) {
-          let value = document.getElementById("is-test").checked;
-          if (!value) {
-            evt.preventDefault();
-          }
-        }
+        // function isTest(evt) {
+        //   let value = document.getElementById("is-test").checked;
+        //   if (!value) {
+        //     evt.preventDefault();
+        //   }
+        // }
       </script>

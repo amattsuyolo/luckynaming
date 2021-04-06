@@ -27,7 +27,7 @@ class NamingRequest extends FormRequest
             'last_name' => 'required|string',
             "zodiac" => 'required|string',
             "sex" => 'required|string',
-            "test" => 'required|string',
+            // "test" => 'required|string',
         ];
     }
 }

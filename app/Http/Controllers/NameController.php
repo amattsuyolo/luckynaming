@@ -61,11 +61,11 @@ class NameController extends Controller
             $returnComBinations[$i] = $goodNumComBinations[$i]['top'].','.$goodNumComBinations[$i]['middle'].','.$goodNumComBinations[$i]['last'];
         }
         $return_zodiac_middle_info=[];
-        $return_zodiac_middle_info["good"] = implode(",",$zodiac_middle_info["good"]) ?? "";
-        $return_zodiac_middle_info["bad"] = implode(",",$zodiac_middle_info["bad"]) ?? "";
+        $return_zodiac_middle_info["good"] = @implode(",",$zodiac_middle_info["good"]) ?? "";
+        $return_zodiac_middle_info["bad"] = @implode(",",$zodiac_middle_info["bad"]) ?? "";
         $return_zodiac_last_info=[];
-        $return_zodiac_last_info["good"] = implode(",",$zodiac_last_info["good"]) ?? "";
-        $return_zodiac_last_info["bad"] = implode(",",$zodiac_last_info["bad"])?? "";
+        $return_zodiac_last_info["good"] = @implode(",",$zodiac_last_info["good"]) ?? "";
+        $return_zodiac_last_info["bad"] = @implode(",",$zodiac_last_info["bad"])?? "";
 
         // echo "<pre>";
         // var_dump([

@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('nameformal/index');
 })->name("index");
 
-Route::post('/naming/result', 'NameController@namingResult');
+Route::post('/naming/result', 'NameController@namingResult')->name('naming.result');
 
 Route::get('/post/{post_id}', 'PostController@postContent')->name('content');
 
