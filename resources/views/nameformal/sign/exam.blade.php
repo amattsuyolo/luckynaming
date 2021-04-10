@@ -32,7 +32,7 @@
 <p>4.解籤資訊請持續關注本網站，或留言會有老師親自回覆</p>
 <h3>點圖求籤</h3>
 <div class="row" id="choose_dice" onclick="ShowDice()">
-    <img class="mx-auto d-block"  src="image/dice.jpeg" alt="籤">
+    <img class="mw-100 mx-auto d-block"  src="image/dice.jpeg" alt="籤">
 </div>
 {{-- 抽籤系統  躑杯 --}}
 {{-- 各籤文的列表 --}}
