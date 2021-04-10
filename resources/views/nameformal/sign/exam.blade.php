@@ -86,7 +86,7 @@
         //會產生1~5之間的隨機亂數
         let code = getRandom(1,60);
         console.log(code);
-        url = `/sign/${code}`;
+        url = `/sign/${code}?dice=1`;
         //導向
         location.href = url;
    }

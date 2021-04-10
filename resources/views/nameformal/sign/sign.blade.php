@@ -30,10 +30,14 @@
     <div class="container">
       <div class="row">
         <div class="mx-auto ql-editor" style="z-index:0 !important" >
-            <h2>{!! $content['first'] !!}</h2>
-            <h2>{!! $content['second'] !!}</h2>
-            <h2>{!! $content['third'] !!}</h2>
-            <h2>{!! $content['fourth'] !!}</h2>
+          @if($is_from_dice==1)
+          <h1 style="color:#ffc955"> 選中籤詩</h1>
+          <br>
+          @endif
+            <h3>{!! $content['first'] !!}</h3>
+            <h3>{!! $content['second'] !!}</h3>
+            <h3>{!! $content['third'] !!}</h3>
+            <h3>{!! $content['fourth'] !!}</h3>
         </div>
       </div>
     </div>

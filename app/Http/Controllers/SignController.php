@@ -44,12 +44,18 @@ class SignController extends Controller
      * @param  \App\Sign  $sign
      * @return \Illuminate\Http\Response
      */
-    public function show(Sign $sign)
+    public function show(Sign $sign, Request $request)
     {
+        $is_from_dice = ($request->dice == 1) ? 1 : 0;
         $sign_key = Config('yearSign.' . ($sign->id - 1));
         $content = Config('yearSignContent.content.' . $sign_key);
         $og_description = "專業解籤：{$content['first']},{$content['second']},{$content['third']},{$content['fourth']}";
-        return view("nameformal.sign.sign", ["sign" => $sign, "content" => $content, "og_description" => $og_description]);
+        return view("nameformal.sign.sign", [
+            "sign" => $sign,
+            "content" => $content,
+            "og_description" => $og_description,
+            "is_from_dice" => $is_from_dice
+        ]);
     }
 
     /**
