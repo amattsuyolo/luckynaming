@@ -85,4 +85,8 @@ class SignController extends Controller
     {
         //
     }
+    public function exam()
+    {
+        return view('nameformal/sign/exam');
+    }
 }
