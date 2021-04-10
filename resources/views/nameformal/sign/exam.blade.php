@@ -30,7 +30,7 @@
 <p>2.問完問題後向神明問是否賜籤，若是有三個聖杯才開始抽籤詩。</p>
 <p>3.開始抽籤後問神明是否是這支籤，連續三個聖杯即為該支,否的話將抽取的籤放在一旁避免重複抽到</p>
 <p>4.解籤資訊請持續關注本網站，或留言會有老師親自回覆</p>
-<h3>點選求籤</h3>
+<h3>點圖求籤</h3>
 <div class="row" id="choose_dice" onclick="ShowDice()">
     <img class="mx-auto d-block"  src="image/dice.jpeg" alt="籤">
 </div>
