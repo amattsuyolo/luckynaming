@@ -32,9 +32,9 @@ Route::get('/post', 'PostController@show');
 Route::get('/tag/{tag_id}', 'TagController@index')->name('tags');
 
 //六十甲子籤
-Route::get('/sign_exam', 'SignController@exam')->name('sixty.sign.exam');
+Route::get('/sign', 'SignController@exam')->name('sixty.sign');
 
-Route::get('/sign', 'SignController@index')->name('sixty.sign');
+// Route::get('/sign_exam', 'SignController@index')->name('sixty.sign');
 Route::get('/sign/{sign}', 'SignController@show')->name('sixty.sign_content');
 
 Route::get('/about', function () {
