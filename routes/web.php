@@ -44,3 +44,6 @@ Route::get('/about', function () {
 Route::get('/for-tiffany', function () {
     return view('card');
 });
+Route::get('/for-tiffany2', function () {
+    return view('drop');
+});
